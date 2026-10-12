@@ -1,0 +1,516 @@
+.logo{
+    width: 100px;
+}
+.logo2{
+    width: 600px;
+}
+.inicio{
+    padding: 100px;
+}
+.menu{
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* From Uiverse.io by 00Kubi */ 
+.radio-inputs {
+  margin-top: 30px;
+  margin-left: 20px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 0.5rem;
+  background-color: #eee;
+  box-sizing: border-box;
+  box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+  padding: 0.25rem;
+  width: 1870px;
+  font-size: 14px;
+}
+
+.radio-inputs .radio {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.radio-inputs .radio input {
+  display: none;
+}
+
+.radio-inputs .radio .name {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.5rem 0;
+  color: rgba(51, 65, 85, 1);
+  transition: all 0.15s ease-in-out;
+}
+
+.radio-inputs .radio input:checked + .name {
+  background-color: #fff;
+  font-weight: 600;
+}
+
+/* Hover effect */
+.radio-inputs .radio:hover .name {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Animation */
+.radio-inputs .radio input:checked + .name {
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: select 0.3s ease;
+}
+
+@keyframes select {
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Particles */
+.radio-inputs .radio input:checked + .name::before,
+.radio-inputs .radio input:checked + .name::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #f63b3b;
+  opacity: 0;
+  animation: particles 0.5s ease forwards;
+}
+
+.radio-inputs .radio input:checked + .name::before {
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.radio-inputs .radio input:checked + .name::after {
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes particles {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(var(--direction));
+  }
+}
+
+.radio-inputs .radio input:checked + .name::before {
+  --direction: -10px;
+}
+
+.radio-inputs .radio input:checked + .name::after {
+  --direction: 10px;
+}
+
+.bajaj{
+  margin: 30px;
+}
+
+/* From Uiverse.io by srinivasaiml */ 
+.card-effect {
+  perspective: 1000px;
+}
+
+.card-inner {
+  margin: 30px;
+  --card-bg: #ffffff;
+  --card-accent: #140702;
+  --card-text: #263238;
+  --card-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  height: 380px;
+  background: var(--card-bg);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+    box-shadow 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+  transform-style: preserve-3d; /* Required for 3D effects */
+}
+
+.card-inner:hover {
+  transform: rotateY(10deg) rotateX(10deg) translateZ(10px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+}
+
+.card__liquid {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 300px;
+  height: 200px;
+  background: #4a90e2; /* Liquid color */
+  border-radius: 50%;
+  transform: translateZ(-80px); /* Position behind the card */
+  filter: blur(80px);
+  transition:
+    transform 0.7s cubic-bezier(0.36, 0, 0.66, -0.56),
+    opacity 0.3s ease-in-out;
+  opacity: 0; /* Initially hidden */
+}
+
+.card-inner:hover .card__liquid {
+  transform: translateZ(-50px) translateY(30px) translateX(-20px) rotate(-20deg)
+    scale(1.2);
+  opacity: 0.7; /* Fade in on hover */
+}
+
+.card__shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 30%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.1) 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.card-inner:hover .card__shine {
+  opacity: 1;
+  animation: shine-effect 2s infinite linear;
+}
+
+.card__glow {
+  position: absolute;
+  inset: -15px;
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(255, 138, 101, 0.4) 0%,
+    rgba(255, 138, 101, 0) 60%
+  );
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.card-inner:hover .card__glow {
+  opacity: 1;
+}
+
+.card__content {
+  padding: 1.5em;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  position: relative;
+  z-index: 2;
+}
+
+.card__badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #f9a825;
+  color: white;
+  padding: 0.3em 0.6em;
+  border-radius: 999px;
+  font-size: 0.8em;
+  font-weight: 600;
+  transform: scale(0.7);
+  opacity: 0;
+  transition: all 0.5s ease 0.2s;
+}
+
+.card-inner:hover .card__badge {
+  transform: scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+
+.card__image {
+  width: 100%;
+  height: 150px;
+  border-radius: 15px;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-inner:hover .card__image {
+  transform: translateY(-8px) scale(1.05);
+}
+
+.card__image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      circle at 20% 80%,
+      rgba(255, 255, 255, 0.15) 0%,
+      transparent 40%
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 3px,
+      transparent 3px,
+      transparent 6px
+    );
+  opacity: 0.6;
+}
+
+.card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+a {
+    text-decoration: none;
+}
+.card__title {
+  color: var(--card-text);
+  font-size: 1.2em;
+  margin: 0;
+  font-weight: 700;
+  transition:
+    color 0.4s ease-in-out,
+    transform 0.4s ease-in-out;
+}
+
+.card-inner:hover .card__title {
+  color: var(--card-accent);
+  transform: translateX(3px);
+}
+
+.card__description {
+  color: var(--card-text);
+  font-size: 0.85em;
+  margin: 0;
+  opacity: 0.8;
+  transition:
+    opacity 0.4s ease-in-out,
+    transform 0.4s ease-in-out;
+}
+
+.card-inner:hover .card__description {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.card__price {
+  color: var(--card-text);
+  font-weight: 700;
+  font-size: 1.1em;
+  transition:
+    color 0.4s ease-in-out,
+    transform 0.4s ease-in-out;
+}
+
+.card-inner:hover .card__price {
+  color: var(--card-accent);
+  transform: translateX(3px);
+}
+
+.card__button {
+  width: 32px;
+  height: 32px;
+  background: var(--card-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition:
+    transform 0.4s ease-in-out,
+    box-shadow 0.4s ease-in-out;
+  transform: scale(0.85);
+}
+
+.card-inner:hover .card__button {
+  transform: scale(1);
+  box-shadow: 0 0 0 5px rgba(255, 138, 101, 0.3);
+}
+
+.card-inner:hover .card__button svg {
+  animation: pulse-button 1.5s infinite;
+}
+
+/* Animations */
+@keyframes shine-effect {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+@keyframes pulse-button {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* From Uiverse.io by Wendell47 */ 
+.button {
+  width: 300px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  border: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10rem;
+  transition: all 0.02s;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgb(37, 37, 37);
+  z-index: 0;
+  box-shadow: 0 0px 7px -5px rgba(0, 0, 0, 0.5);
+}
+
+.containerbuton{
+  margin-bottom: 20px;
+}
+.button:hover {
+  background: rgb(193, 217, 248);
+  color: rgb(33, 0, 85);
+}
+
+.button:active {
+  transform: scale(0.97);
+}
+
+.hoverEffect {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.hoverEffect div {
+  background: rgb(207, 222, 0);
+  background: linear-gradient(
+    90deg,
+    rgb(222, 218, 0) 0%,
+    rgb(255, 70, 70) 49%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  border-radius: 40rem;
+  width: 10rem;
+  height: 10rem;
+  transition: 0.4s;
+  filter: blur(20px);
+  animation: effect infinite 3s linear;
+  opacity: 0.5;
+}
+
+.button:hover .hoverEffect div {
+  width: 8rem;
+  height: 8rem;
+}
+
+@keyframes effect {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.logosMotos{
+  width: 300px;
+}
+
+.boxer{
+  width: 180px;
+}
+
+.boxerks{
+  width: 170px;
+}
+.pulsarn{
+  width: 168px;
+
+}
+
+.gn125{
+  width: 170px;
+}
+
+.card-lado{
+  display: flex;
+}
+
+.tvs{
+  width: 600px;
+}
+.kymco{
+  width: 550px;
+}
+.ceronter{
+  width: 500px;
+}
+.benelli{
+  width: 500px;
+}
+.bmw{
+  width: 500px;
+}
+.vaisand{
+  width: 500px;
+}
+.ducati{
+  width: 400px;
+}
+.piaggio{
+  width: 400px;
+}
+.logohero{
+  width: 300px;
+}
